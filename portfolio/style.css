@@ -1,0 +1,167 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	line-height: 1.6;
+	color: #1f2937;
+	background-color: #fff;
+	font-family: "Poppins", sans-serif;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.links > li > a {
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	transition: border-color 250ms ease-out;
+}
+
+.links > li > a:hover {
+	border-bottom-color: rgba(0, 42, 255, 0.705);
+}
+
+ul {
+	padding-left: 1.25rem;
+}
+
+#site-header,
+#main-content,
+#site-footer {
+	width: min(70rem, calc(100% - 2rem));
+	margin-inline: auto;
+}
+
+#site-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1.25rem;
+	padding: 1rem;
+	border-radius: 3rem;
+	box-shadow: 0 0 2rem rgba(0, 42, 255, 0.282);
+}
+
+.site-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	flex-shrink: 0;
+}
+
+.site-logo__image {
+	width: 2rem;
+	height: 2rem;
+	object-fit: contain;
+	border-radius: 50%;
+}
+
+.site-logo__name {
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.site-logo__name span {
+	color: rgb(255, 0, 0);
+	font-weight: 900;
+}
+
+#site-header nav {
+	min-width: 0;
+	max-width: 100%;
+}
+
+.nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem 1rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#site-header > a:last-child {
+	padding: 0.6rem 1.2rem;
+	border: 1px solid currentColor;
+	border-radius: 1.5rem;
+	font-weight: 500;
+}
+
+#site-header > a:last-child:hover {
+	background-color: rgba(240, 242, 245, 0.752);
+}
+
+.section-title {
+	padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+
+h2 {
+	font-size: clamp(1.5rem, 3vw, 2.5rem);
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+}
+
+/* main  */
+#hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 2rem;
+}
+
+.hero-content {
+	min-width: 0;
+}
+
+.hero-title {
+	text-shadow: 0 0 2rem rgba(0, 42, 255, 0.478);
+}
+
+.hero-content p {
+	max-width: 60ch;
+}
+
+.hero-image {
+	margin: 0;
+}
+
+.hero-image img {
+	width: clamp(12rem, 30vw, 22rem);
+	aspect-ratio: 1;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow: 0 0 2rem rgba(0, 42, 255, 0.282);
+}
+
+.social-links {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem 2rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-links li > a {
+	font-weight: 500;
+	font-size: clamp(0.5rem, 2vw, 1rem);
+}

@@ -4,50 +4,60 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio | Ayush</title>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header>
-			<a href="#home">
-				<img
-					src="https://raw.githubusercontent.com/AyushKmr0/Portfolio/refs/heads/main/ascets/images/favicon.ico"
-					alt="logo"
-					width="40"
-					height="40" />
+			<div id="site-header">
+				<a href="#hero" class="site-logo">
+					<img
+						src="https://raw.githubusercontent.com/AyushKmr0/Portfolio/refs/heads/main/ascets/images/favicon.ico"
+						alt="Ayush logo"
+						class="site-logo__image"
+						width="40"
+						height="40" />
 
-				<p><span><</span>Ayush<span>/></span></p>
-			</a>
+					<p class="site-logo__name">
+						<span>&lt;</span>Ayush<span>/&gt;</span>
+					</p>
+				</a>
 
-			<nav aria-label="Main navigation">
-				<ul>
-					<li>
-						<a href="#home">Home</a>
-					</li>
-					<li>
-						<a href="#about">About</a>
-					</li>
-					<li>
-						<a href="#skills">Skills</a>
-					</li>
-					<li>
-						<a href="#projects">Projects</a>
-					</li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
-			</nav>
+				<nav aria-label="Main navigation">
+					<ul class="nav-links links">
+						<li>
+							<a href="#hero">Home</a>
+						</li>
+						<li>
+							<a href="#about">About</a>
+						</li>
+						<li>
+							<a href="#skills">Skills</a>
+						</li>
+						<li>
+							<a href="#projects">Projects</a>
+						</li>
+						<li>
+							<a href="#contact">Contact</a>
+						</li>
+					</ul>
+				</nav>
 
-			<a
-				href="https://drive.google.com/file/d/16Lzy3YrqCi6RnBuQSkWPM-0Uu8DPQY5W/view?usp=sharing"
-				target="_blank"
-				>My Resume</a
-			>
+				<a
+					href="https://drive.google.com/file/d/16Lzy3YrqCi6RnBuQSkWPM-0Uu8DPQY5W/view?usp=sharing"
+					target="_blank"
+					>My Resume</a
+				>
+			</div>
 		</header>
 
-		<main id="main">
-			<section aria-label="hero-title" id="home">
-				<div>
-					<h2>I'm Ayush, a web developer</h2>
+		<main id="main-content">
+			<section aria-label="hero-title" id="hero" class="section-title">
+				<div class="hero-content">
+					<h2 class="hero-title">I'm Ayush, a web developer</h2>
 					<p>
 						MCA graduate passionate about full-stack development,
 						backend engineering, and building practical,
@@ -55,15 +65,13 @@
 					</p>
 				</div>
 
-				<figure>
+				<figure class="hero-image">
 					<img
 						src="https://avatars.githubusercontent.com/u/165952944?v=4"
-						alt="profile photo"
-						width="250"
-						height="250" />
+						alt="profile photo" />
 				</figure>
 
-				<ul>
+				<ul class="social-links links">
 					<li>
 						<a href="https://github.com/AyushKmr0" target="_blank"
 							>GitHub</a
@@ -90,9 +98,9 @@
 			</section>
 
 			<section id="about" aria-label="about-title">
-				<h2>About</h2>
+				<h2 id="about-title" class="section-title">About</h2>
 
-				<div>
+				<div class="about-content">
 					<p>
 						I have a background in computer applications and a
 						strong interest in full-stack web development. I build
@@ -117,12 +125,14 @@
 			</section>
 
 			<section id="skills" aria-label="skills-title">
-				<h2>Technical Skills</h2>
+				<h2 id="skills-title" class="section-title">
+					Technical Skills
+				</h2>
 
-				<div>
-					<div>
-						<h3>Frontend</h3>
-						<ul>
+				<div class="skills-grid">
+					<div class="skill-card">
+						<h3 class="skill-card__title">Frontend</h3>
+						<ul class="skill-list">
 							<li>HTML5</li>
 							<li>CSS3</li>
 							<li>JavaScript</li>
@@ -131,9 +141,9 @@
 						</ul>
 					</div>
 
-					<div>
-						<h3>Backend</h3>
-						<ul>
+					<div class="skill-card">
+						<h3 class="skill-card__title">Backend</h3>
+						<ul class="skill-list">
 							<li>Node.js</li>
 							<li>Express.js</li>
 							<li>REST APIs</li>
@@ -142,18 +152,20 @@
 						</ul>
 					</div>
 
-					<div>
-						<h3>Databases</h3>
-						<ul>
+					<div class="skill-card">
+						<h3 class="skill-card__title">Databases</h3>
+						<ul class="skill-list">
 							<li>MongoDB</li>
 							<li>MySQL</li>
 							<li>SQL Server</li>
 						</ul>
 					</div>
 
-					<div>
-						<h3>Tools and Technologies</h3>
-						<ul>
+					<div class="skill-card">
+						<h3 class="skill-card__title">
+							Tools and Technologies
+						</h3>
+						<ul class="skill-list">
 							<li>Git</li>
 							<li>GitHub</li>
 							<li>Docker</li>
@@ -164,78 +176,94 @@
 			</section>
 
 			<section id="projects" aria-label="projects-title">
-				<h2>Featured Projects</h2>
+				<h2 id="projects-title" class="section-title">
+					Featured Projects
+				</h2>
 
-				<div>
-					<article>
-						<h3>Orbitus E-Learning Platform</h3>
-						<p>
+				<div class="project-grid">
+					<article class="project-card">
+						<h3 class="project-card__title">
+							Orbitus E-Learning Platform
+						</h3>
+						<p class="project-card__description">
 							Orbitus is a skill-sharing platform that connects
 							learners and mentors through collaborative learning,
 							live sessions, certifications, and community-driven
 							knowledge exchange.
 						</p>
 
-						<p>
+						<p class="project-card__technologies">
 							<strong>Technologies: </strong> React, Node.js,
 							Express.js, MongoDB
 						</p>
-						<a
-							href="https://github.com/AyushKmr0/Orbitus-SkillSwap-Platform"
-							target="_blank"
-							>Source Code</a
-						>
-						<a
-							href="https://orbitus-skill-swap-platform.vercel.app/"
-							target="_blank"
-							>Live Demo</a
-						>
+
+						<div class="project-card__links">
+							<a
+								href="https://github.com/AyushKmr0/Orbitus-SkillSwap-Platform"
+								target="_blank"
+								>Source Code</a
+							>
+							<a
+								href="https://orbitus-skill-swap-platform.vercel.app/"
+								target="_blank"
+								>Live Demo</a
+							>
+						</div>
 					</article>
-					<article>
-						<h3>AI_Virtual_Assistant</h3>
-						<p>
+					<article class="project-card">
+						<h3 class="project-card__title">
+							AI_Virtual_Assistant
+						</h3>
+						<p class="project-card__description">
 							A voice-based AI Virtual Assistant built with the
 							MERN stack, Gemini API, and Web Speech API. Supports
 							voice commands, authentication, and assistant
 							memory.
 						</p>
 
-						<p>
+						<p class="project-card__technologies">
 							<strong>Technologies:</strong>
 							MERN Stack, Gemini API, Web Speech API
 						</p>
 
-						<a
-							href="https://github.com/AyushKmr0/AI_Virtual_Assistant"
-							target="_blank"
-							>Source Code</a
-						>
+						<div class="project-card__links">
+							<a
+								href="https://github.com/AyushKmr0/AI_Virtual_Assistant"
+								target="_blank"
+								>Source Code</a
+							>
+						</div>
 					</article>
-					<article>
-						<h3>Workforce-Analytics-Dashboard</h3>
-						<p>
+					<article class="project-card">
+						<h3 class="project-card__title">
+							Workforce-Analytics-Dashboard
+						</h3>
+						<p class="project-card__description">
 							Role-based Employee Management System with Admin,
 							HR, and Employee dashboards, attendance, leaves,
 							documents, approvals, analytics, and work reports
 						</p>
-						<a
-							href="https://github.com/AyushKmr0/Workforce-Analytics-Dashboard"
-							target="_blank"
-							>Source Code</a
-						>
+
+						<div class="project-card__links">
+							<a
+								href="https://github.com/AyushKmr0/Workforce-Analytics-Dashboard"
+								target="_blank"
+								>Source Code</a
+							>
+						</div>
 					</article>
 				</div>
 			</section>
 
 			<section id="contact" aria-label="contact-title">
-				<h2>Lets Connect</h2>
-				<p>
+				<h2 id="contact-title" class="section-title">Lets Connect</h2>
+				<p class="contact-description">
 					Have an opportunity, a project idea, or a question? Feel
 					free to reach out.
 				</p>
 
-				<form>
-					<div>
+				<form class="contact-form">
+					<div class="form-group">
 						<label for="fullName">Full Name *</label>
 						<input
 							type="text"
@@ -247,7 +275,7 @@
 							required />
 					</div>
 
-					<div>
+					<div class="form-group">
 						<label for="email">Email Address *</label>
 						<input
 							type="email"
@@ -257,7 +285,7 @@
 							required />
 					</div>
 
-					<div>
+					<div class="form-group">
 						<label for="message">Message</label>
 						<br />
 						<textarea
@@ -268,28 +296,32 @@
 							placeholder="Share your message"></textarea>
 					</div>
 
-					<div>
-						<button type="submit">Submit Application</button>
-					</div>
-					<hr />
+					<button class="contact-form__submit" type="submit">
+						Submit Application
+					</button>
 				</form>
 			</section>
 		</main>
 
-		<footer>
-			<div>
-				<a href="#home">
+		<footer id="site-footer">
+			<div class="site-footer__inner">
+				<a href="#home" class="site-logo">
 					<img
 						src="https://raw.githubusercontent.com/AyushKmr0/Portfolio/refs/heads/main/ascets/images/favicon.ico"
-						alt="logo" />
+						alt="logo"
+						class="site-logo__image" />
 
-					<p><span><</span>Ayush<span>/></span></p>
+					<p class="site-logo__name">
+						<span>&lt;</span>Ayush<span>/&gt;</span>
+					</p>
 				</a>
 
-				<p>&copy; 2026 Ayush Kumar. All rights reserved.</p>
+				<p class="site-footer__copyright">
+					&copy; 2026 Ayush Kumar. All rights reserved.
+				</p>
 			</div>
 
-			<a href="#home">Back to Top</a>
+			<a href="#hero" class="site-footer__back-to-top">Back to Top</a>
 		</footer>
 	</body>
 </html>
