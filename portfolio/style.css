@@ -26,6 +26,7 @@ a {
 }
 
 .links > li > a {
+	padding-block-end: 0.5rem;
 	text-decoration: none;
 	border-bottom: 3px solid transparent;
 	transition: border-color 250ms ease-out;
@@ -99,9 +100,10 @@ ul {
 }
 
 #site-header > a:last-child {
+	border-bottom: 3px solid rgb(216, 214, 214);
+	border-top: 3px solid rgb(216, 214, 214);
 	padding: 0.6rem 1.2rem;
-	border: 1px solid currentColor;
-	border-radius: 1.5rem;
+	border-radius: 2rem;
 	font-weight: 500;
 }
 
@@ -109,8 +111,10 @@ ul {
 	background-color: rgba(240, 242, 245, 0.752);
 }
 
-.section-title {
-	padding-block: clamp(2.5rem, 6vw, 5rem);
+section {
+	padding-block: clamp(3.5rem, 8vw, 7rem);
+	text-shadow: 0 0 2rem rgba(0, 42, 255, 0.478);
+	margin: auto;
 }
 
 h2 {
@@ -157,6 +161,7 @@ h2 {
 	flex-wrap: wrap;
 	gap: 1rem 2rem;
 	list-style: none;
+	text-transform: uppercase;
 	padding: 0;
 	margin: 0;
 }
@@ -164,4 +169,99 @@ h2 {
 .social-links li > a {
 	font-weight: 500;
 	font-size: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* About  */
+
+#about-content {
+	max-width: 75ch;
+}
+
+/* Skills grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.skill-card,
+.project-card {
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    overflow-wrap: anywhere;
+}
+
+/* Contact form */
+.contact-form {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 40rem;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+#contact input,
+#contact textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem;
+    font: inherit;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact button {
+    padding: 0.75rem 1.25rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+	background-color: rgb(60 60 60);
+	padding: 2rem;
+	color: #fff;
+}
+
+#site-footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.site-footer__back-to-top {
+	border-bottom: 3px solid rgb(216, 214, 214);
+	border-top: 3px solid rgb(216, 214, 214);
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+}
+
+.site-footer__back-to-top:hover {
+	border-bottom: 6px solid rgb(255, 0, 0);
+	border-top: 6px solid rgb(255, 0, 0);
 }
